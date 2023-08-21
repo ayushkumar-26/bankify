@@ -1,0 +1,56 @@
+/* AddBank.css */
+
+.add-bank-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    /* border: 1px solid #ccc; */
+    border-radius: 5px;
+    background-color:rgba(49, 48, 48, 0.6);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .add-bank-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .add-bank-form {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .add-bank-form .form-control {
+    border-radius: 5px;
+  }
+  
+  .add-bank-form .invalid-feedback {
+    color: #dc3545;
+  }
+  
+  .add-bank-button {
+    width: 100%;
+  }
+  
+  .add-bank-messages {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+  
+  .add-bank-messages p {
+    margin: 5px 0;
+  }
+  
+  .add-bank-success {
+    color: green;
+  }
+  
+  .add-bank-failure {
+    color: red;
+  }
+  
+  .add-bank-error {
+    color: #dc3545;
+  }
+  
