@@ -51,7 +51,7 @@ export default class FindAllCustomers extends Component {
                                     <th>DOB:</th><th>Gender:</th><th>Email:</th><th>Contact Number:</th></tr>
                             </thead>
                             <tbody>
-                                {this.state.responseData.map((contact, i) =>
+                                {this.state.responseData && this.state.responseData.map((contact, i) =>
                                     <tr key={i} >
                                         <td>{contact.id}</td>
                                         <td>{contact.name}</td>

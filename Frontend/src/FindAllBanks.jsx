@@ -50,7 +50,7 @@ export default class FindAllBanks extends Component {
                                 <tr><th>Bank ID:</th><th>Name:</th><th>Website:</th><th>Date Established:</th><th>Total Branches:</th></tr>
                             </thead>
                             <tbody>
-                                {this.state.responseData.map((contact, i) =>
+                                {this.state.responseData && this.state.responseData.map((contact, i) =>
                                     <tr key={i}>
                                         <td>{contact.bankId}</td>
                                         <td>{contact.name}</td>

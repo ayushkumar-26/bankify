@@ -16,6 +16,7 @@ import com.demo.entity.Bank;
 import com.demo.entity.Customer;
 import com.demo.exception.BankException;
 import com.demo.exception.CustomerException;
+import com.demo.util.EmailSender;
 
 @Component
 public class CustomerBo {
@@ -69,6 +70,16 @@ public class CustomerBo {
 		if(!b1.isPresent()) {
 			throw new CustomerException("Bank is not present with id: "+ c.getBank().getBankId());
 		}
+		try {
+			EmailSender.sendPlainTextEmail("bankify.manager@gmail.com", 
+		    		c.getEmail(),
+		            "Welcome!",
+		            List.of("Hi, "+c.getName()+",", "you are added as a customer of "+b1.get().getName()+"."), 
+		            true);
+		} catch (Exception e) {
+			throw new CustomerException("Email not valid.");
+		}
+	    
 		return dao.save(c);
 	}
 	
